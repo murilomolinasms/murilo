@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+            margin-top: 20px;
+        }
+        .section-title {
+            margin-top: 20px;
+            color: #333;
+            font-size: 24px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .item img {
+            width: 50px;
+            height: auto;
+        }
+        .item-info {
+            flex-grow: 1;
+            padding-left: 10px;
+        }
+        .item-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .item-info p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        .price {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .quantity {
+            width: 50px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cardápio</h1>
+
+        <form action="resumo.php" method="POST">
+
+            <div class="section-title">Lanches</div>
+            <div class="item">
+                <img src="xburger.jpg" alt="X-Burger">
+                <div class="item-info">
+                    <h3>X-Burger</h3>
+                    <p class="price">R$ 8,30</p>
+                </div>
+                <input type="number" name="qtd_xburger" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="item">
+                <img src="mistoquente.jpg" alt="Misto Quente">
+                <div class="item-info">
+                    <h3>Misto Quente</h3>
+                    <p class="price">R$ 7,00</p>
+                </div>
+                <input type="number" name="qtd_mistoquente" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="item">
+                <img src="xsalada.jpg" alt="X-Salada">
+                <div class="item-info">
+                    <h3>X-Salada</h3>
+                    <p class="price">R$ 8,90</p>
+                </div>
+                <input type="number" name="qtd_xsalada" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="section-title">Bebidas</div>
+            <div class="item">
+                <img src="coca.jpg" alt="Coca-Cola">
+                <div class="item-info">
+                    <h3>Coca-Cola</h3>
+                    <p class="price">R$ 6,00</p>
+                </div>
+                <input type="number" name="qtd_coca" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="item">
+                <img src="fanta.jpg" alt="Fanta">
+                <div class="item-info">
+                    <h3>Fanta</h3>
+                    <p class="price">R$ 5,00</p>
+                </div>
+                <input type="number" name="qtd_fanta" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="item">
+                <img src="pepsi.jpg" alt="Pepsi">
+                <div class="item-info">
+                    <h3>Pepsi</h3>
+                    <p class="price">R$ 5,50</p>
+                </div>
+                <input type="number" name="qtd_pepsi" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="section-title">Porções</div>
+            <div class="item">
+                <img src="batata.jpg" alt="Batata Frita">
+                <div class="item-info">
+                    <h3>Batata Frita</h3>
+                    <p class="price">R$ 10,00</p>
+                </div>
+                <input type="number" name="qtd_batata" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="item">
+                <img src="aneldecebola.jpg" alt="Onion Rings">
+                <div class="item-info">
+                    <h3>Onion Rings</h3>
+                    <p class="price">R$ 12,00</p>
+                </div>
+                <input type="number" name="qtd_onionrings" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="section-title">Doces</div>
+            <div class="item">
+                <img src="brigadeiro.jpg" alt="Brigadeiro">
+                <div class="item-info">
+                    <h3>Brigadeiro</h3>
+                    <p class="price">R$ 2,00</p>
+                </div>
+                <input type="number" name="qtd_brigadeiro" value="0" min="0" class="quantity">
+            </div>
+
+            <div class="item">
+                <img src="beijinho.jpg" alt="Beijinho">
+                <div class="item-info">
+                    <h3>Beijinho</h3>
+                    <p class="price">R$ 2,50</p>
+                </div>
+                <input type="number" name="qtd_beijinho" value="0" min="0" class="quantity">
+            </div>
+
+            <button type="submit" class="btn">Ver Resumo da Compra</button>
+        </form>
+    </div>
+
+</body>
+</html>
